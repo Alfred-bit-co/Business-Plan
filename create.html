@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartB-Plan - Créer un plan</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>SmartB-Plan</h1>
+        </div>
+        <div class="header-actions">
+            <select id="language-select">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+            </select>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <h2 data-i18n="createTitle">Créer votre business plan</h2>
+
+        <form id="businessPlanForm">
+            <!-- Étape 1 -->
+            <div class="form-step active">
+                <h3 data-i18n="step1Title">Présentation de l’idée</h3>
+                <label data-i18n="projectName">Nom du projet</label>
+                <input type="text" name="projectName" required>
+                <label data-i18n="problem">Problème résolu</label>
+                <textarea name="problem" required></textarea>
+                <label data-i18n="solution">Solution proposée</label>
+                <textarea name="solution" required></textarea>
+                <button type="button" class="next-btn" data-i18n="next">Suivant</button>
+            </div>
+
+            <!-- Étape 2 -->
+            <div class="form-step">
+                <h3 data-i18n="step2Title">Analyse du marché</h3>
+                <label data-i18n="targetAudience">Cible principale</label>
+                <input type="text" name="targetAudience" required>
+                <label data-i18n="marketNeed">Besoin client</label>
+                <textarea name="marketNeed" required></textarea>
+                <label data-i18n="competitors">Concurrents</label>
+                <textarea name="competitors" required></textarea>
+                <button type="button" class="prev-btn" data-i18n="previous">Précédent</button>
+                <button type="button" class="next-btn" data-i18n="next">Suivant</button>
+            </div>
+
+            <!-- Étape 3 -->
+            <div class="form-step">
+                <h3 data-i18n="step3Title">Modèle économique</h3>
+                <label data-i18n="revenueModel">Comment gagnez-vous de l’argent ?</label>
+                <textarea name="revenueModel" required></textarea>
+                <label data-i18n="averagePrice">Prix moyen</label>
+                <input type="text" name="averagePrice" required>
+                <label data-i18n="mainCosts">Charges principales</label>
+                <textarea name="mainCosts" required></textarea>
+                <button type="button" class="prev-btn" data-i18n="previous">Précédent</button>
+                <button type="button" class="next-btn" data-i18n="next">Suivant</button>
+            </div>
+
+            <!-- Étape 4 -->
+            <div class="form-step">
+                <h3 data-i18n="step4Title">Objectifs</h3>
+                <label data-i18n="shortTerm">Objectif à 6 mois</label>
+                <textarea name="shortTerm" required></textarea>
+                <label data-i18n="longTerm">Objectif à 1 an</label>
+                <textarea name="longTerm" required></textarea>
+                <button type="button" class="prev-btn" data-i18n="previous">Précédent</button>
+                <button type="submit" data-i18n="generate">Générer le plan</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 – Alfred AYITOU | 📞 +228 72 23 90 76</p>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/generate.js"></script>
+</body>
+</html>
